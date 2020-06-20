@@ -68,7 +68,7 @@
                         </td>
                         <td th:text="${item.getTotalPrice()}"></td>
                         <td>
-                            <form action="basket/remove" method="post">
+                            <form action="cart/remove" method="post">
                                 <input type="hidden" name="productId" th:value="${item.getId()}"/>
                                 <input type="submit" value="Remove"/>
                             </form>
