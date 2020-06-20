@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Grzegorz Dubiel"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Online Shop</title>
+
+  <!-- Latest compiled and minified Jquery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"/>
+
+  <!-- Optional theme -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous"/>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+</head>
+
+<body>
+
+<div th:replace="navbar :: navcopy"></div>
+
+<div class="container">
+  <div class="page-header">
+    <h1>New Product<i class="glyphicons-database-plus"></i></h1>
+    <p>Fill in the form, please</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12 col-xs-12">
+
+      <form action="/product/new" method="post" class="form-horizontal">
+        <table class="table table-striped table-bordered table-hover ">
+          <tr>
+            <td>Name: <input type="text" name="productName" class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Description<input type="text" name="description" class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Supplier<input type="text" name="supplier" class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Supplier description<input type="text" name="supplierDescription"
+                                           class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Category<input type="text" name="category" class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Category description<input type="text" name="categoryDescription"
+                                           class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Category department<input type="text" name="categoryDepartment"
+                                          class="form-control"/></td>
+          </tr>
+          <tr>
+            <td>Price<input id="quantity" type="number" min="1" name="price"
+                            value="0"/></td>
+          </tr>
+        </table>
+        <input type="submit" value="Add" class="btn btn-success"/>
+      </form>
+    </div>
+  </div>
+
+  <div th:replace="footer :: copy"></div>
+</div>
+</body>
+</html>
